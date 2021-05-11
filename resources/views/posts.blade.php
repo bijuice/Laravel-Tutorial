@@ -1,24 +1,16 @@
-<!DOCTYPE html>
-<head>
-    <link rel="stylesheet" href="/app.css">
-    <title>My Blog</title>
-</head>
+<x-layout>
+        @foreach ($posts as $post)
+            <article class="mb-4">
+                <h1>
+                    <a href="/posts/{{$post->slug}}">
+                        {{$post->title}}
+                    </a>
+                </h1>
 
-<body>
+                <div>
+                    {{$post->excerpt}}
+                </div>
+            </article>
+        @endforeach
 
-    @foreach ($posts as $post)
-        <article class="mb-4">
-            <h1>
-                <a href="/posts/{{$post->slug}}">
-                    {{$post->title}}
-                </a>
-            </h1>
-
-            <div>
-                {{$post->excerpt}}
-            </div>
-        </article>
-    @endforeach
-
-</body>
-</html>
+</x-layout>

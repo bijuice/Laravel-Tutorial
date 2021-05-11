@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<head>
-    <link rel="stylesheet" href="/app.css">
-    <title>My Blog</title>
-</head>
-
-<body>
+<x-layout>
     <article>
         <h1>{{$post->title}}</h1>
 
@@ -13,4 +7,4 @@
         </div>
     </article>
     <a href="/">Go Back</a>
-</body>
+</x-layout>
